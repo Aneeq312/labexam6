@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	
+</head>
+
+<body>
+
+	<form name = "CalcForm">
+		<label for="firstval">Enter first value:</label>
+		<br>
+		<input type="text" id="firstval" name="firstval">
+		<br>
+		<label for="secondval" >Enter second value:</label>
+		<br>
+		<input type="text" id="secondval" name="secondval">
+		<br>
+		<input type="button" value="Calculate" onclick="calc()">
+		<br>
+		<label for="sum" >Sum:</label>
+		<br>
+		<input type="text" id="sum" name="sum">
+		<br>
+		<label for="sub" >Subtraction:</label>
+		<br>
+		<input type="text" id="sub" name="sub">
+		<br>
+		<label for="divi" >Division:</label>
+		<br>
+		<input type="text" id="divi" name="divi">
+		<br>
+		<label for="pro" >Product:</label>
+		<br>
+		<input type="text" id="pro" name="pro">
+		<br>
+	</form>
+	
+	<script>
+		function calc()
+		{
+			
+			var num1, num2, res;
+			num1=Number(document.CalcForm.firstval.value);
+			num2=Number(document.CalcForm.secondval.value);
+			
+			res=num1+num2;
+			
+			document.CalcForm.sum.value=res;
+			
+			res=num1-num2;
+			
+			document.CalcForm.sub.value=res;
+			
+			res=num1/num2;
+			
+			document.CalcForm.divi.value=res;
+			
+			res=num1*num2;
+			
+			document.CalcForm.pro.value=res;
+		}
+	</script>
+</body>
+
+</html>

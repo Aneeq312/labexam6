@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MinMax</title>
+	
+</head>
+
+<body>
+
+	<form name = "InputForm">
+		<label for="a">a:&nbsp &nbsp </label>
+		<input type="text" id="a" name="a">
+		<br>
+		
+		<label for="b">b:&nbsp &nbsp </label>
+		<input type="text" id="b" name="b">
+		<br>
+		
+		<label for="c">c:&nbsp &nbsp </label>
+		<input type="text" id="c" name="c">
+		<br>
+		
+		<label for="d">d:&nbsp &nbsp </label>
+		<input type="text" id="d" name="d">
+		<br>
+		
+		<label for="e">e:&nbsp &nbsp </label>
+		<input type="text" id="e" name="e">
+		<br>
+		<br>
+		<input type="button" value="Calculate" onclick="calc2()">
+		<br>
+		
+	</form>
+	<br><br>
+	<h4>Max: </h4><p id=mxp></p>
+	<br> 
+	<h4>Min: </h4><p id=mnp></p>
+	<br> 
+	<h4>Random: </h4><p id=rp></p>
+	<br> 
+	
+	<script>
+		function calc()
+		{
+			document.write("Hello");
+			var numbers[];
+			numbers[0]=Number(document.InputForm.a.value);
+			numbers[1]=Number(document.InputForm.b.value);
+			numbers[2]=Number(document.InputForm.c.value);
+			numbers[3]=Number(document.InputForm.d.value);
+			numbers[4]=Number(document.InputForm.e.value);
+			
+			for(let i=0; i<=4; i++){
+				document.write(numbers[i] + "<br>");
+				
+			var max,min,ran;
+			
+			max=Math.max(...numbers);
+			min=Math.min(...numbers);
+			
+			
+			document.getElementById("mxp").innerHTML = max;
+		}
+		
+		function calc2()
+		{
+			var mx,mn,rn;
+			
+			mx=Math.max(document.InputForm.a.value,document.InputForm.b.value,document.InputForm.c.value,document.InputForm.d.value,document.InputForm.e.value);
+			mn=Math.max(document.InputForm.a.value,document.InputForm.b.value,document.InputForm.c.value,document.InputForm.d.value,document.InputForm.e.value);
+			
+			
+			rn= Math.floor(Math.random() * (mx - mn) ) + mn;
+
+			document.getElementById("mxp").innerHTML = mx;
+			document.getElementById("mnp").innerHTML = mn;
+			document.getElementById("rp").innerHTML = rn;
+		}
+	</script>
+</body>
+</html>
